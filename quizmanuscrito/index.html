@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Jornada da Oração Guiada</title>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '3233786760139367');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=3233786760139367&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<!-- UTMify UTMs -->
+<script
+  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+  data-utmify-prevent-xcod-sck
+  data-utmify-prevent-subids
+  async
+  defer
+></script>
+
+<!-- UTMify Pixel -->
+<script>
+  window.pixelId = "6a28a857ada8490f017495f7";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+/* ── Reset & Variables ─────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --navy:       #082B49;
+  --blue-cta:   #169FEA;
+  --light-blue: #DDF4FF;
+  --blue-border:#BDEAFF;
+  --gold:       #D8A63A;
+  --green-cta:  #20B455;
+}
+
+/* ── Body / Background ─────────────────────────────────────────── */
+body {
+  font-family: 'Nunito', system-ui, sans-serif;
+  background: linear-gradient(160deg, #eaf8ff 0%, #f7fcff 45%, #ddf4ff 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 24px 16px 56px;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+}
+body::before {
+  content: '';
+  position: fixed;
+  top: -60px; left: 50%;
+  transform: translateX(-50%);
+  width: 480px; height: 480px;
+  background: radial-gradient(ellipse, rgba(22,159,234,.10) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* ── Wrapper ───────────────────────────────────────────────────── */
+#wrapper { width: 100%; max-width: 400px; position: relative; }
+
+/* ── Progress Bar ──────────────────────────────────────────────── */
+.progress-wrap { margin-bottom: 10px; }
+.progress-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px; }
+.progress-label { font-size: 12px; font-weight: 600; color: rgba(8,43,73,.5); }
+.progress-pct   { font-size: 12px; font-weight: 800; color: var(--blue-cta); }
+.progress-track { height: 8px; background: var(--light-blue); border-radius: 999px; overflow: hidden; }
+.progress-fill  { height: 100%; border-radius: 999px; background: linear-gradient(90deg, #169FEA, #0D7DC2); transition: width .7s ease; }
+
+/* ── Clarity Meter ─────────────────────────────────────────────── */
+.clarity-wrap {
+  background: rgba(255,255,255,.88); border: 1px solid var(--blue-border);
+  border-radius: 16px; padding: 12px 16px; margin-bottom: 10px;
+}
+.clarity-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+.clarity-label { font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; color: rgba(8,43,73,.6); }
+.clarity-star  { color: var(--gold); margin-right: 5px; }
+.clarity-pct   { font-size: 14px; font-weight: 900; color: var(--gold); }
+.clarity-track { height: 10px; background: #f0f0f0; border-radius: 999px; overflow: visible; position: relative; }
+.clarity-fill  {
+  height: 100%; border-radius: 999px; position: relative;
+  background: linear-gradient(90deg, #9e6500, #d8a63a, #f5dc8a, #d8a63a);
+  transition: width 1s ease;
+}
+.clarity-dot {
+  position: absolute; right: -5px; top: 50%; transform: translateY(-50%);
+  width: 14px; height: 14px; border-radius: 50%; background: var(--gold);
+  border: 2px solid #fff;
+  box-shadow: 0 0 8px 3px rgba(216,166,58,.55);
+  animation: pulseGold 2.5s ease-in-out infinite;
+}
+
+/* ── Top Nav Row ───────────────────────────────────────────────── */
+.nav-row { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+.nav-row .progress-wrap { flex: 1; margin-bottom: 0; }
+.back-btn {
+  width: 36px; height: 36px; border-radius: 50%; border: 2px solid var(--blue-border);
+  background: #fff; display: flex; align-items: center; justify-content: center;
+  cursor: pointer; color: rgba(8,43,73,.4); flex-shrink: 0; transition: all .2s;
+}
+.back-btn:hover { border-color: var(--blue-cta); color: var(--blue-cta); }
+.back-btn svg { width: 14px; height: 14px; }
+
+/* ── Card ──────────────────────────────────────────────────────── */
+.card {
+  background: rgba(255,255,255,.97);
+  border: 1px solid var(--blue-border);
+  border-radius: 24px;
+  box-shadow: 0 8px 40px rgba(22,159,234,.14), 0 2px 8px rgba(8,43,73,.07);
+  overflow: hidden;
+}
+
+/* ── Step Content animation ────────────────────────────────────── */
+.step-content { animation: fadeInUp .38s ease both; }
+.step-content.exiting { animation: fadeOutUp .25s ease both; }
+@keyframes fadeInUp   { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeOutUp  { from { opacity: 1; transform: translateY(0);    } to { opacity: 0; transform: translateY(-16px); } }
+
+/* ── Step inner padding ────────────────────────────────────────── */
+.step-inner { padding: 24px; display: flex; flex-direction: column; gap: 18px; }
+
+/* ── Badge ─────────────────────────────────────────────────────── */
+.badge-wrap { text-align: center; }
+.badge {
+  display: inline-block;
+  font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: .1em;
+  color: var(--blue-cta); background: var(--light-blue); border: 1px solid var(--blue-border);
+  border-radius: 999px; padding: 6px 16px;
+}
+
+/* ── Headlines ─────────────────────────────────────────────────── */
+.headline {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.85rem; font-weight: 700; line-height: 1.2;
+  color: var(--navy); text-align: center;
+}
+.headline-lg { font-size: 2rem; }
+.subtext { font-size: 14px; color: rgba(8,43,73,.68); line-height: 1.65; text-align: center; }
+.subtext-italic { font-style: italic; font-size: 13px; color: rgba(8,43,73,.48); text-align: center; }
+
+/* ── Hero Visual ───────────────────────────────────────────────── */
+.hero-visual {
+  position: relative; width: 100%; height: 200px; border-radius: 16px; overflow: hidden;
+  background: linear-gradient(170deg, #0f2a44 0%, #082B49 55%, #0d4c7a 100%);
+}
+.hero-glow {
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 50% 20%, rgba(216,166,58,.45) 0%, transparent 65%);
+}
+.hero-ray {
+  position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+  width: 2px; height: 100%;
+  background: linear-gradient(to bottom, rgba(245,220,138,.7), transparent);
+  animation: lightRay 3.5s ease-in-out infinite;
+}
+.hero-center { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; }
+.hero-emoji  { font-size: 3.5rem; animation: float 4s ease-in-out infinite; }
+.hero-quote  { font-family: 'Cormorant Garamond', serif; font-style: italic; color: rgba(216,166,58,.8); font-size: 13px; text-align: center; padding: 0 16px; }
+
+/* ── Chip ──────────────────────────────────────────────────────── */
+.chip-wrap { display: flex; justify-content: center; }
+.chip {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 12px; font-weight: 700; color: var(--blue-cta);
+  background: var(--light-blue); border: 1px solid var(--blue-border);
+  border-radius: 999px; padding: 8px 16px;
+}
+
+/* ── CTA Button ────────────────────────────────────────────────── */
+.btn-primary {
+  display: block; width: 100%; padding: 16px 20px;
+  border: none; border-radius: 16px; cursor: pointer;
+  font-family: 'Nunito', sans-serif; font-size: 13px; font-weight: 900;
+  text-transform: uppercase; letter-spacing: .1em; color: #fff;
+  background: linear-gradient(135deg, #169FEA, #0D7DC2);
+  box-shadow: 0 8px 24px rgba(22,159,234,.38);
+  transition: all .2s; line-height: 1;
+}
+.btn-primary:hover   { filter: brightness(1.08); }
+.btn-primary:active  { transform: scale(.97); }
+.btn-green {
+  background: linear-gradient(135deg, #20B455, #169A47);
+  box-shadow: 0 10px 28px rgba(32,180,85,.38);
+}
+.btn-ghost {
+  background: none; border: none; cursor: pointer; width: 100%; padding: 8px;
+  font-family: 'Nunito', sans-serif; font-size: 12px; font-weight: 600;
+  color: rgba(8,43,73,.38); text-decoration: underline; text-underline-offset: 3px;
+  transition: color .2s;
+}
+.btn-ghost:hover { color: rgba(8,43,73,.6); }
+
+/* ── Option Button ─────────────────────────────────────────────── */
+.option-btn {
+  width: 100%; text-align: left; padding: 14px 16px;
+  border: 2px solid var(--blue-border); border-radius: 16px;
+  background: #fff; cursor: pointer; transition: all .18s;
+  font-family: 'Nunito', sans-serif; font-size: 15px; font-weight: 600;
+  color: var(--navy); display: flex; align-items: center; justify-content: space-between; gap: 10px;
+}
+.option-btn:hover    { border-color: rgba(22,159,234,.5); background: rgba(221,244,255,.35); }
+.option-btn:active   { transform: scale(.98); }
+.option-btn.selected { border-color: var(--blue-cta); background: rgba(221,244,255,.6); box-shadow: 0 0 0 3px rgba(22,159,234,.18); }
+.option-left  { display: flex; align-items: center; gap: 10px; }
+.option-emoji { font-size: 18px; line-height: 1; }
+.option-check {
+  width: 20px; height: 20px; border-radius: 50%; border: 2px solid var(--blue-border);
+  flex-shrink: 0; display: flex; align-items: center; justify-content: center;
+  transition: all .18s;
+}
+.option-btn.selected .option-check {
+  border-color: var(--blue-cta); background: var(--blue-cta);
+}
+.option-check svg { display: none; }
+.option-btn.selected .option-check svg { display: block; }
+.options-list { display: flex; flex-direction: column; gap: 10px; }
+
+/* ── Text Input ────────────────────────────────────────────────── */
+.input-label { font-size: 13px; font-weight: 700; color: rgba(8,43,73,.6); margin-bottom: 6px; display: block; }
+.text-input {
+  width: 100%; padding: 16px; border-radius: 16px; border: 2px solid var(--blue-border);
+  font-family: 'Nunito', sans-serif; font-size: 16px; color: var(--navy);
+  background: #fff; outline: none; transition: border-color .2s, box-shadow .2s;
+}
+.text-input::placeholder { color: rgba(8,43,73,.28); }
+.text-input:focus { border-color: var(--blue-cta); box-shadow: 0 4px 20px rgba(22,159,234,.15); }
+.input-error { font-size: 12px; color: #e53e3e; margin-top: 4px; }
+
+/* ── Feedback message ──────────────────────────────────────────── */
+.feedback { text-align: center; font-size: 13px; font-weight: 700; color: var(--green-cta); min-height: 20px; animation: fadeInUp .4s ease both; }
+
+/* ── Divider ───────────────────────────────────────────────────── */
+.divider { display: flex; align-items: center; gap: 12px; }
+.divider-line { flex: 1; height: 1px; background: var(--blue-border); }
+.divider-star { color: var(--gold); font-size: 18px; }
+
+/* ── Info Box ──────────────────────────────────────────────────── */
+.info-box {
+  background: linear-gradient(135deg, rgba(221,244,255,.7), rgba(189,234,255,.4));
+  border: 1px solid var(--blue-border); border-radius: 16px; padding: 18px;
+}
+.info-box-gold { background: rgba(216,166,58,.06); border-color: rgba(216,166,58,.28); }
+
+/* ── Testimonial ───────────────────────────────────────────────── */
+.testimonial {
+  background: rgba(221,244,255,.45); border: 1px solid var(--blue-border);
+  border-radius: 16px; padding: 14px;
+}
+.testimonial-inner { display: flex; align-items: flex-start; gap: 10px; }
+.t-avatar {
+  width: 44px; height: 44px; border-radius: 50%; flex-shrink: 0;
+  background: linear-gradient(135deg, #169FEA, #082B49);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 20px; color: #fff;
+}
+.t-name  { font-size: 12px; font-weight: 800; color: rgba(8,43,73,.7); margin-bottom: 5px; }
+.t-text  { font-size: 13px; color: rgba(8,43,73,.8); line-height: 1.6; font-style: italic; }
+.t-stars { display: flex; gap: 2px; margin-top: 6px; }
+.t-stars span { color: var(--gold); font-size: 11px; }
+.testimonials-list { display: flex; flex-direction: column; gap: 10px; }
+
+/* ── Loading Step ──────────────────────────────────────────────── */
+.loading-visual {
+  position: relative; width: 176px; height: 176px; border-radius: 16px; overflow: hidden;
+  margin: 0 auto;
+  background: linear-gradient(160deg, #0f2d4a 0%, #082B49 55%, #0d4c7a 100%);
+}
+.loading-glow { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 25%, rgba(216,166,58,.45) 0%, transparent 65%); }
+.loading-ray  { position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 1px; height: 100%; background: linear-gradient(to bottom, rgba(245,220,138,.7), transparent); animation: lightRay 3.5s ease-in-out infinite; }
+.loading-center { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; }
+.loading-emoji  { font-size: 3rem; animation: float 4s ease-in-out infinite; }
+.loading-sub    { font-family: 'Cormorant Garamond', serif; font-style: italic; color: rgba(216,166,58,.7); font-size: 11px; }
+.loading-pct   { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 700; color: var(--blue-cta); text-align: center; }
+.loading-track { height: 10px; background: var(--light-blue); border-radius: 999px; overflow: hidden; }
+.loading-fill  { height: 100%; border-radius: 999px; background: linear-gradient(90deg, #9e6500, #d8a63a, #f5dc8a); transition: width .3s ease; }
+.loading-phrase { font-size: 13px; font-weight: 700; color: var(--blue-cta); text-align: center; min-height: 20px; animation: fadeInUp .4s ease both; }
+.loading-name   { font-size: 11px; color: rgba(8,43,73,.45); font-style: italic; text-align: center; }
+
+/* ── Video Mock ────────────────────────────────────────────────── */
+/* ── VSL hint & CTA ────────────────────────────────────────────── */
+.vsl-hint {
+  display: flex; align-items: center; gap: 10px;
+  background: linear-gradient(135deg, #082B49, #0d4c7a);
+  border-radius: 12px; padding: 12px 16px;
+  color: #fff; font-size: 13px; font-weight: 600; line-height: 1.4;
+  border: 1px solid rgba(22,159,234,.35);
+}
+.vsl-hint-icon {
+  flex-shrink: 0; width: 34px; height: 34px; border-radius: 50%;
+  background: var(--blue-cta); display: flex; align-items: center;
+  justify-content: center; font-size: 13px;
+  animation: bonusPulse 2s ease-in-out infinite;
+}
+.vsl-cta-btn {
+  margin-top: 8px; font-size: 15px !important;
+  padding: 18px 20px !important; width: 100%;
+}
+
+/* ── YouTube VSL embed ─────────────────────────────────────────── */
+.yt-wrap {
+  position: relative; width: 100%; border-radius: 16px; overflow: hidden;
+  aspect-ratio: 16/9;
+  background: #000;
+  box-shadow: 0 8px 32px rgba(8,43,73,.28);
+}
+.yt-wrap iframe {
+  position: absolute; inset: 0; width: 100%; height: 100%; border: none; display: block;
+}
+.video-helper { font-size: 11px; color: rgba(8,43,73,.45); text-align: center; margin-top: 8px; }
+
+/* ── Offer ─────────────────────────────────────────────────────── */
+.offer-person-box {
+  border-radius: 16px; padding: 16px;
+  background: linear-gradient(140deg, #082B49, #0d4c7a);
+  display: flex; flex-direction: column; gap: 8px;
+}
+.offer-person-row { display: flex; align-items: flex-start; gap: 8px; }
+.offer-person-star { color: var(--gold); font-size: 12px; margin-top: 2px; flex-shrink: 0; }
+.offer-person-text { font-size: 13px; color: rgba(255,255,255,.9); }
+.offer-person-text span { color: rgba(255,255,255,.55); }
+.offer-person-text strong { color: #fff; font-weight: 800; }
+.bullets-list { display: flex; flex-direction: column; gap: 10px; }
+.bullet-row   { display: flex; align-items: flex-start; gap: 10px; }
+.bullet-check {
+  width: 20px; height: 20px; border-radius: 50%; background: rgba(32,180,85,.15);
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px;
+}
+
+/* ── Chosen block ──────────────────────────────────────────────── */
+.chosen-block {
+  border-radius: 16px; padding: 16px 18px;
+  background: linear-gradient(135deg, #082B49, #0d4c7a);
+  border: 1px solid rgba(216,166,58,.35);
+  text-align: center;
+}
+.chosen-crown { font-size: 1.6rem; margin-bottom: 6px; }
+.chosen-title { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 700; color: var(--gold); margin-bottom: 6px; }
+.chosen-text  { font-size: 13px; color: rgba(255,255,255,.82); line-height: 1.65; }
+
+/* ── Product main card ─────────────────────────────────────────── */
+.product-main-card {
+  border: 2px solid var(--gold);
+  border-radius: 20px; overflow: hidden;
+  background: #fff;
+  box-shadow: 0 8px 32px rgba(216,166,58,.18);
+}
+.product-main-header {
+  background: linear-gradient(135deg, #082B49, #0d4c7a);
+  padding: 14px 16px 10px;
+  text-align: center;
+}
+.product-main-tag {
+  display: inline-block; font-size: 10px; font-weight: 900; text-transform: uppercase;
+  letter-spacing: .12em; color: var(--navy); background: var(--gold);
+  border-radius: 999px; padding: 3px 12px; margin-bottom: 8px;
+}
+.product-main-title {
+  font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 700;
+  color: #fff; line-height: 1.2;
+}
+.product-main-sub { font-size: 12px; color: rgba(255,255,255,.65); margin-top: 4px; }
+.product-main-body { padding: 14px 16px; display: flex; flex-direction: column; gap: 8px; }
+.product-bullet { display: flex; align-items: flex-start; gap: 8px; }
+.product-bullet-check {
+  width: 18px; height: 18px; border-radius: 50%; background: rgba(32,180,85,.15);
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px;
+}
+.product-bullet-check svg { width: 9px; height: 7px; }
+.product-bullet span { font-size: 13px; color: rgba(8,43,73,.8); line-height: 1.5; }
+.product-main-footer {
+  border-top: 1px solid var(--blue-border);
+  padding: 10px 16px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.product-value-old { font-size: 13px; color: rgba(8,43,73,.35); text-decoration: line-through; font-weight: 700; }
+.product-included   { font-size: 13px; font-weight: 900; color: var(--green-cta); }
+
+/* ── Bonus section ─────────────────────────────────────────────── */
+.bonus-section-title {
+  text-align: center; font-size: 11px; font-weight: 900; text-transform: uppercase;
+  letter-spacing: .12em; color: rgba(8,43,73,.5); padding: 4px 0;
+  display: flex; align-items: center; gap: 10px;
+}
+.bonus-section-title::before, .bonus-section-title::after {
+  content: ''; flex: 1; height: 1px; background: var(--blue-border);
+}
+.bonus-card {
+  border: 1px solid var(--blue-border); border-radius: 16px; overflow: hidden;
+  background: #fff; display: flex; flex-direction: column; transition: box-shadow .2s;
+}
+.bonus-card:hover { box-shadow: 0 6px 24px rgba(22,159,234,.15); }
+.bonus-card-img {
+  width: 100%; aspect-ratio: 1/1;
+  overflow: hidden; flex-shrink: 0;
+}
+.bonus-card-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.bonus-card-body { padding: 14px 16px; display: flex; flex-direction: column; gap: 5px; }
+.bonus-card-num  { font-size: 10px; font-weight: 900; text-transform: uppercase; letter-spacing: .1em; color: var(--blue-cta); }
+.bonus-card-title{ font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; font-weight: 700; color: var(--navy); line-height: 1.2; }
+.bonus-card-sub  { font-size: 12px; color: rgba(8,43,73,.58); line-height: 1.5; }
+.bonus-card-price{ display: flex; align-items: center; gap: 8px; margin-top: 2px; }
+.bonus-old-price { font-size: 12px; font-weight: 700; color: rgba(8,43,73,.32); text-decoration: line-through; }
+.bonus-free-badge{
+  font-size: 11px; font-weight: 900; color: #fff;
+  background: linear-gradient(135deg, #20B455, #169A47);
+  border-radius: 999px; padding: 2px 10px; letter-spacing: .04em;
+}
+
+/* ── Value stack ───────────────────────────────────────────────── */
+.value-stack {
+  border: 2px dashed rgba(216,166,58,.45); border-radius: 16px; padding: 16px;
+  background: rgba(216,166,58,.04); text-align: center;
+}
+.value-stack-title { font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; color: rgba(8,43,73,.5); margin-bottom: 8px; }
+.value-stack-rows  { display: flex; flex-direction: column; gap: 5px; margin-bottom: 10px; }
+.value-row { display: flex; justify-content: space-between; align-items: center; font-size: 13px; }
+.value-row-name { color: rgba(8,43,73,.7); font-weight: 600; }
+.value-row-price{ color: rgba(8,43,73,.4); font-weight: 700; text-decoration: line-through; }
+.value-divider  { height: 1px; background: rgba(216,166,58,.3); margin: 6px 0; }
+.value-total-row{ display: flex; justify-content: space-between; align-items: center; }
+.value-total-label{ font-size: 14px; font-weight: 900; color: var(--navy); }
+.value-total-price{ font-size: 14px; font-weight: 900; color: rgba(8,43,73,.35); text-decoration: line-through; }
+.value-you-pay { margin-top: 8px; }
+.value-you-pay-label{ font-size: 11px; font-weight: 700; color: rgba(8,43,73,.5); text-transform: uppercase; letter-spacing: .08em; }
+.value-you-pay-price{
+  font-size: 11px; font-weight: 900; color: var(--green-cta);
+  background: rgba(32,180,85,.1); border-radius: 999px; padding: 3px 14px;
+  display: inline-block; margin-top: 4px;
+}
+.bullet-check svg { width: 10px; height: 8px; }
+.bullet-text { font-size: 14px; color: rgba(8,43,73,.8); }
+.price-block  { text-align: center; display: flex; flex-direction: column; gap: 4px; }
+.price-label  { font-size: 11px; text-transform: uppercase; letter-spacing: .1em; color: rgba(8,43,73,.45); font-weight: 700; }
+.price-old-row { display: flex; align-items: center; justify-content: center; gap: 10px; }
+.price-old  { font-size: 20px; font-weight: 700; color: rgba(8,43,73,.32); text-decoration: line-through; }
+.price-badge { font-size: 11px; font-weight: 900; color: var(--green-cta); background: rgba(32,180,85,.12); padding: 2px 8px; border-radius: 999px; }
+.price-main { display: flex; align-items: baseline; justify-content: center; gap: 2px; }
+.price-rs   { font-size: 18px; font-weight: 700; color: rgba(8,43,73,.6); }
+.price-int  { font-size: 4rem; font-weight: 900; color: var(--navy); line-height: 1; }
+.price-dec  { font-size: 2rem; font-weight: 900; color: var(--navy); line-height: 1; }
+.price-sub  { font-size: 11px; color: rgba(8,43,73,.4); font-weight: 600; }
+.secure-row { display: flex; align-items: center; justify-content: center; gap: 6px; }
+.secure-row span { font-size: 14px; }
+.secure-row p    { font-size: 11px; font-weight: 600; color: rgba(8,43,73,.45); }
+
+/* ── Disclaimer ────────────────────────────────────────────────── */
+.disclaimer { padding: 14px 20px; border-top: 1px solid var(--blue-border); }
+.disclaimer p { font-size: 11px; color: rgba(8,43,73,.33); text-align: center; line-height: 1.7; }
+
+/* ── Keyframes ─────────────────────────────────────────────────── */
+@keyframes pulseGold {
+  0%,100% { box-shadow: 0 0 0 0 rgba(216,166,58,.4); }
+  50%      { box-shadow: 0 0 0 10px rgba(216,166,58,0); }
+}
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50%      { transform: translateY(-10px); }
+}
+@keyframes lightRay {
+  0%,100% { opacity: .25; }
+  50%      { opacity: .8; }
+}
+
+/* ── Bonus unlocked banner ─────────────────────────────────────── */
+.bonus-unlocked-banner {
+  position: relative; overflow: hidden;
+  background: linear-gradient(135deg, #0a2e50 0%, #0d4c7a 40%, #082B49 100%);
+  border: 2px solid rgba(216,166,58,.55);
+  border-radius: 18px; padding: 16px 18px;
+  display: flex; align-items: center; gap: 14px;
+  box-shadow: 0 6px 28px rgba(216,166,58,.18), 0 2px 8px rgba(8,43,73,.25);
+}
+.bonus-unlocked-banner::before {
+  content: '';
+  position: absolute; top: 0; left: -60%;
+  width: 50%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.10), transparent);
+  animation: bonusShimmer 2.8s ease-in-out infinite;
+}
+.bonus-unlocked-icon-wrap {
+  flex-shrink: 0; width: 52px; height: 52px; border-radius: 50%;
+  background: linear-gradient(135deg, #d8a63a, #f5dc8a, #d8a63a);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.6rem; line-height: 1;
+  box-shadow: 0 0 0 4px rgba(216,166,58,.25), 0 4px 14px rgba(216,166,58,.4);
+  animation: bonusPulse 2.2s ease-in-out infinite;
+}
+.bonus-unlocked-content { flex: 1; min-width: 0; }
+.bonus-unlocked-tag {
+  font-size: 9px; font-weight: 900; text-transform: uppercase;
+  letter-spacing: .14em; color: var(--gold); margin-bottom: 3px;
+}
+.bonus-unlocked-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem; font-weight: 700; color: #fff; line-height: 1.2;
+}
+.bonus-unlocked-title span { color: var(--gold); font-style: italic; }
+.bonus-unlocked-sub {
+  font-size: 11px; color: rgba(255,255,255,.65); margin-top: 3px; line-height: 1.4;
+}
+.bonus-unlocked-count {
+  flex-shrink: 0;
+  background: linear-gradient(135deg, #20B455, #169A47);
+  border-radius: 12px; padding: 6px 10px; text-align: center;
+  box-shadow: 0 3px 10px rgba(32,180,85,.35);
+}
+.bonus-unlocked-count-num { font-size: 1.6rem; font-weight: 900; color: #fff; line-height: 1; }
+.bonus-unlocked-count-lbl { font-size: 9px; font-weight: 800; color: rgba(255,255,255,.85); text-transform: uppercase; letter-spacing: .06em; }
+@keyframes bonusShimmer {
+  0%   { left: -60%; }
+  100% { left: 130%; }
+}
+@keyframes bonusPulse {
+  0%,100% { box-shadow: 0 0 0 4px rgba(216,166,58,.25), 0 4px 14px rgba(216,166,58,.4); }
+  50%      { box-shadow: 0 0 0 8px rgba(216,166,58,.10), 0 4px 20px rgba(216,166,58,.6); }
+}
+
+/* ── Scrollbar ─────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--light-blue); }
+::-webkit-scrollbar-thumb { background: var(--blue-cta); border-radius: 2px; }
+</style>
+</head>
+<body>
+<div id="wrapper">
+  <div id="header-area"></div>
+  <div class="card">
+    <div id="step-container"></div>
+  </div>
+</div>
+
+<script>
+/* ════════════════════════════════════════════════
+   CONFIGURAÇÃO — altere aqui
+   ════════════════════════════════════════════════ */
+const CHECKOUT_URL = 'https://ggcheckout.app/checkout/v2/CzYzz5izUG3yi6YEd5kK';
+
+/* ════════════════════════════════════════════════
+   COPY — altere textos, perguntas e opções aqui
+   ════════════════════════════════════════════════ */
+const AREA_OPTIONS = [
+  { id:'financas',       emoji:'💸', label:'Vida financeira e portas fechadas' },
+  { id:'familia',        emoji:'🏠', label:'Família e proteção do lar' },
+  { id:'relacionamento', emoji:'💔', label:'Relacionamento, mágoas ou solidão' },
+  { id:'saude',          emoji:'🙏', label:'Saúde, cansaço e preocupação' },
+  { id:'paz',            emoji:'🕊️', label:'Paz interior, medo ou ansiedade' },
+  { id:'direcao',        emoji:'✨', label:'Direção para uma decisão importante' },
+];
+const PESO_OPTIONS = [
+  { id:'orando',   label:'Tenho orado, mas parece que nada muda' },
+  { id:'cansado',  label:'Sinto que estou cansado(a) de lutar' },
+  { id:'paz',      label:'Preciso de paz para continuar' },
+  { id:'medo',     label:'Tenho medo do que pode acontecer' },
+  { id:'resposta', label:'Sinto que preciso de uma resposta de Deus' },
+  { id:'fe',       label:'Quero fortalecer minha fé novamente' },
+];
+const URGENCIA_OPTIONS = [
+  { id:'paz',      label:'Preciso de uma palavra de paz' },
+  { id:'direcao',  label:'Preciso de direção com certa urgência' },
+  { id:'dificeis', label:'Estou vivendo dias muito difíceis' },
+  { id:'adiar',    label:'Sinto que não posso adiar mais esse momento' },
+];
+const FE_OPTIONS = [
+  { id:'creio',  label:'Sim, eu creio' },
+  { id:'voltar', label:'Eu quero voltar a crer com força' },
+  { id:'abalada',label:'Minha fé está abalada, mas não desisti' },
+  { id:'ajuda',  label:'Eu preciso de ajuda para confiar novamente' },
+];
+const TESTIMONIALS = [
+  { initial:'M', name:'Maria Aparecida, 58 anos', text:'Eu estava angustiada com problemas na família. Ao ouvir a oração, consegui chorar, entregar e sentir meu coração mais calmo. Foi um momento que eu precisava.' },
+  { initial:'J', name:'João Carlos, 62 anos',     text:'Não encarei como uma promessa de milagre, mas como uma oportunidade de parar e falar com Deus. A mensagem me ajudou a recuperar a esperança.' },
+  { initial:'L', name:'Lúcia Helena, 47 anos',    text:'Eu vinha orando há dias sem saber o que dizer. A oração guiada me deu palavras para entregar minha preocupação a Deus.' },
+];
+const LOADING_PHRASES = [
+  { pct:10,  text:'Lendo suas respostas...' },
+  { pct:25,  text:'Identificando a área que mais precisa de cuidado...' },
+  { pct:45,  text:'Preparando uma palavra de fé...' },
+  { pct:65,  text:'Organizando a oração guiada...' },
+  { pct:85,  text:'Finalizando sua mensagem...' },
+  { pct:100, text:'Sua oração foi liberada.' },
+];
+const OFFER_BULLETS = [
+  'Oração guiada personalizada com seu nome',
+  'Mensagem devocional para o seu momento atual',
+  'Palavras de fé para ouvir quando o coração apertar',
+  'Reflexão espiritual para fortalecer sua caminhada',
+  'Acesso imediato após a confirmação',
+  'Você poderá ouvir novamente sempre que precisar',
+];
+const CLARITY = {1:15,2:30,3:45,4:55,5:65,6:75,7:80,8:82,9:90,10:95,11:100};
+
+/* ════════════════════════════════════════════════
+   STATE
+   ════════════════════════════════════════════════ */
+let S = {
+  step:1, nome:'', areaOracao:'', areaEmoji:'',
+  peso:'', urgencia:'', fe:'', clarity:15,
+};
+
+function save() {
+  try { localStorage.setItem('qo_v1', JSON.stringify(S)); } catch(_){}
+}
+function load() {
+  try {
+    const d = JSON.parse(localStorage.getItem('qo_v1') || 'null');
+    if (d) S = {...S, ...d};
+  } catch(_){}
+}
+
+/* ════════════════════════════════════════════════
+   NAVIGATION
+   ════════════════════════════════════════════════ */
+function goTo(n) {
+  S.step = n;
+  S.clarity = CLARITY[n] || S.clarity;
+  save();
+  render();
+}
+function next() { goTo(Math.min(S.step + 1, 11)); }
+function prev() { goTo(Math.max(S.step - 1, 1)); }
+
+/* ════════════════════════════════════════════════
+   HELPERS
+   ════════════════════════════════════════════════ */
+function badge(txt) {
+  return `<div class="badge-wrap"><span class="badge">${txt}</span></div>`;
+}
+function btnPrimary(id, txt) {
+  return `<button class="btn-primary" onclick="${id}()">${txt}</button>`;
+}
+function checkSvg() {
+  return `<svg fill="none" viewBox="0 0 10 8"><path d="M1 4L3.5 6.5L9 1" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+}
+function starsSvg() {
+  return Array(5).fill(`<span>★</span>`).join('');
+}
+function optionsList(opts, selectedVal, onClickFn, showEmoji=false) {
+  return `<div class="options-list">${opts.map((o,i) =>
+    `<button class="option-btn${selectedVal===o.label?' selected':''}"
+      onclick="${onClickFn}(${i})">
+      <div class="option-left">
+        ${showEmoji ? `<span class="option-emoji">${o.emoji}</span>` : ''}
+        <span>${o.label}</span>
+      </div>
+      <div class="option-check">${checkSvg()}</div>
+    </button>`
+  ).join('')}</div>`;
+}
+function testimonialHTML(t) {
+  return `<div class="testimonial"><div class="testimonial-inner">
+    <div class="t-avatar">${t.initial}</div>
+    <div>
+      <div class="t-name">${t.name}</div>
+      <div class="t-text">"${t.text}"</div>
+      <div class="t-stars">${starsSvg()}</div>
+    </div>
+  </div></div>`;
+}
+
+/* ════════════════════════════════════════════════
+   RENDER — HEADER
+   ════════════════════════════════════════════════ */
+function renderHeader() {
+  const pct = Math.round(((S.step - 1) / 10) * 100);
+  const showBack = S.step > 1 && S.step <= 8;
+  if (S.step === 1) { document.getElementById('header-area').innerHTML = ''; return; }
+  document.getElementById('header-area').innerHTML = `
+    <div class="nav-row">
+      ${showBack ? `<button class="back-btn" onclick="prev()"><svg fill="none" viewBox="0 0 14 14"><path d="M9 11L5 7l4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>` : ''}
+      <div class="progress-wrap">
+        <div class="progress-top">
+          <span class="progress-label">Etapa ${S.step} de 11</span>
+          <span class="progress-pct">${pct}%</span>
+        </div>
+        <div class="progress-track"><div class="progress-fill" style="width:${pct}%"></div></div>
+      </div>
+    </div>
+    <div class="clarity-wrap">
+      <div class="clarity-top">
+        <div><span class="clarity-star">✦</span><span class="clarity-label">Nível de clareza espiritual</span></div>
+        <span class="clarity-pct">${S.clarity}%</span>
+      </div>
+      <div class="clarity-track">
+        <div class="clarity-fill" style="width:${S.clarity}%"><div class="clarity-dot"></div></div>
+      </div>
+    </div>`;
+}
+
+/* ════════════════════════════════════════════════
+   RENDER — STEPS
+   ════════════════════════════════════════════════ */
+function step01() {
+  return `<div class="step-inner">
+    ${badge('Mensagem de Oração para Você')}
+    <div style="width:100%;border-radius:18px;overflow:hidden;box-shadow:0 8px 32px rgba(8,43,73,.15)">
+      <img src="inicioquiz.png" alt="Jornada da Oração Guiada" style="width:100%;display:block;aspect-ratio:1/1;object-fit:cover">
+    </div>
+    <h1 class="headline headline-lg">Existe uma oração guiada para o momento que você está vivendo hoje.</h1>
+    <p class="subtext">Talvez você esteja carregando em silêncio uma preocupação que ninguém vê. Antes de ouvir sua mensagem, responda algumas perguntas simples para que a oração seja direcionada à área que mais precisa de cuidado, fé e fortalecimento.</p>
+    <div class="chip-wrap"><div class="chip">⏱ Leva menos de 2 minutos</div></div>
+    ${btnPrimary('next', 'COMEÇAR MINHA JORNADA DE ORAÇÃO →')}
+    <p class="subtext" style="font-size:11px;color:rgba(8,43,73,.32)">Esta experiência foi criada para ajudar você a parar, refletir e orar com mais clareza.</p>
+  </div>`;
+}
+
+function step02() {
+  return `<div class="step-inner">
+    ${badge('Antes de Continuar')}
+    <h2 class="headline">Como você gostaria de ser chamado(a) nesta oração?</h2>
+    <p class="subtext">Digite apenas seu primeiro nome. Ele será usado para tornar a mensagem mais pessoal e acolhedora.</p>
+    <div>
+      <label class="input-label" for="nome-input">Digite seu primeiro nome</label>
+      <input id="nome-input" class="text-input" type="text" placeholder="Ex: Maria" value="${S.nome}" onkeydown="if(event.key==='Enter')confirmNome()">
+      <div id="nome-error" class="input-error"></div>
+    </div>
+    ${btnPrimary('confirmNome', 'CONTINUAR →')}
+  </div>`;
+}
+
+function step03() {
+  return `<div class="step-inner">
+    ${badge('Etapa 1 — Área de Oração')}
+    <h2 class="headline">${S.nome ? S.nome+', em' : 'Em'} qual área você mais precisa de oração hoje?</h2>
+    <p class="subtext">Escolha a opção que mais se aproxima do que você tem vivido.</p>
+    <div id="s3-fb" class="feedback"></div>
+    ${optionsList(AREA_OPTIONS, S.areaOracao, 'selectArea', true)}
+  </div>`;
+}
+
+function step04() {
+  return `<div class="step-inner">
+    ${badge('Etapa 2 — Peso no Coração')}
+    <h2 class="headline">O que mais tem pesado no seu coração nos últimos dias?</h2>
+    <p class="subtext-italic">Responda com sinceridade. Este é um momento entre você, sua fé e Deus.</p>
+    <div id="s4-fb" class="feedback"></div>
+    ${optionsList(PESO_OPTIONS, S.peso, 'selectPeso')}
+  </div>`;
+}
+
+function step05() {
+  return `<div class="step-inner">
+    ${badge('Etapa 3 — Intensidade')}
+    <h2 class="headline">Como você descreveria a urgência dessa oração?</h2>
+    <p class="subtext">Escolha o que melhor descreve o seu momento.</p>
+    <div id="s5-fb" class="feedback"></div>
+    ${optionsList(URGENCIA_OPTIONS, S.urgencia, 'selectUrgencia')}
+  </div>`;
+}
+
+function step06() {
+  return `<div class="step-inner">
+    ${badge('Etapa 4 — Fé')}
+    <h2 class="headline">Mesmo em meio às lutas, você ainda acredita que Deus pode agir?</h2>
+    ${optionsList(FE_OPTIONS, S.fe, 'selectFe')}
+    <div id="s6-msg"></div>
+  </div>`;
+}
+
+function step07() {
+  return `<div class="step-inner">
+    ${badge('Palavra para o Seu Coração')}
+    <h2 class="headline headline-lg">${S.nome ? S.nome+', você' : 'Você'} não chegou até aqui por acaso.</h2>
+    <div class="divider"><div class="divider-line"></div><span class="divider-star">✦</span><div class="divider-line"></div></div>
+    <p class="subtext">Pelas suas respostas, é possível perceber que existe uma área da sua vida pedindo cuidado, direção e oração. Às vezes, a pessoa segue sorrindo por fora, mas por dentro carrega perguntas, medos e pedidos que só Deus conhece.</p>
+    <div class="info-box"><p class="subtext" style="text-align:center">Esta oração não é uma promessa mágica. É um momento de <strong style="color:var(--blue-cta)">fé, entrega e fortalecimento espiritual</strong> para ajudar você a colocar diante de Deus aquilo que tem pesado no seu coração.</p></div>
+    <p class="subtext-italic">Continue até o final. Sua oração guiada está sendo preparada.</p>
+    ${btnPrimary('next', 'CONTINUAR MINHA JORNADA →')}
+  </div>`;
+}
+
+function step08() {
+  return `<div class="step-inner">
+    ${badge('Relatos de Fé')}
+    <h2 class="headline">Pessoas que também tiraram um momento para orar</h2>
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div style="border-radius:16px;overflow:hidden;box-shadow:0 4px 16px rgba(8,43,73,.10)">
+        <img src="depoimento1.png" alt="Depoimento 1" style="width:100%;display:block">
+      </div>
+      <div style="border-radius:16px;overflow:hidden;box-shadow:0 4px 16px rgba(8,43,73,.10)">
+        <img src="depoimento2.png" alt="Depoimento 2" style="width:100%;display:block">
+      </div>
+      <div style="border-radius:16px;overflow:hidden;box-shadow:0 4px 16px rgba(8,43,73,.10)">
+        <img src="depoimento3.png" alt="Depoimento 3" style="width:100%;display:block">
+      </div>
+    </div>
+    <div class="info-box" style="text-align:center">
+      <span style="color:var(--gold)">✦</span>
+      <p class="subtext-italic" style="margin-top:4px">"Muitas vezes, o primeiro sinal de mudança é quando o coração encontra paz para continuar."</p>
+    </div>
+    ${btnPrimary('next', 'LIBERAR MINHA ORAÇÃO →')}
+  </div>`;
+}
+
+function step09() {
+  return `<div class="step-inner">
+    ${badge('Liberação em Andamento')}
+    <h2 class="headline headline-lg">Aguarde só um instante${S.nome ? ', '+S.nome : ''}...</h2>
+    <p class="subtext">Estamos organizando suas respostas para liberar uma mensagem de oração mais alinhada ao seu momento.</p>
+    <div style="width:100%;border-radius:18px;overflow:hidden;box-shadow:0 8px 32px rgba(8,43,73,.15)">
+      <img src="carregandoinfosquiz.png" alt="Carregando sua oração" style="width:100%;display:block;aspect-ratio:1/1;object-fit:cover">
+    </div>
+    <div>
+      <div class="loading-pct" id="load-pct">0%</div>
+      <div class="loading-track"><div class="loading-fill" id="load-fill" style="width:0%"></div></div>
+    </div>
+    <div class="loading-phrase" id="load-phrase">Iniciando...</div>
+    ${S.nome ? `<p class="loading-name">${S.nome}, sua mensagem está sendo preparada com cuidado.</p>` : ''}
+  </div>`;
+}
+
+function step10() {
+  return `<div class="step-inner">
+    ${badge('Oração Liberada')}
+    <h2 class="headline">${S.nome ? S.nome+', sua' : 'Sua'} oração guiada está pronta.</h2>
+
+    <!-- Instrução acima do vídeo -->
+    <div class="vsl-hint">
+      <span class="vsl-hint-icon">▶</span>
+      <span>Pressione <strong>play</strong> e ouça sua oração guiada antes de continuar</span>
+    </div>
+
+    <div class="yt-wrap">
+      <video id="vsl-video" controls playsinline preload="metadata"
+        style="width:100%;height:100%;display:block;background:#000"
+        onended="_showVideoCta()">
+        <source src="vslteste.mp4" type="video/mp4">
+      </video>
+    </div>
+    <p class="video-helper">🙏 A oração foi preparada especialmente para você — vale cada segundo.</p>
+
+    <!-- CTA sempre visível -->
+    <button class="btn-primary btn-green vsl-cta-btn" onclick="next()">
+      Quero adquirir logo minha oração →
+    </button>
+  </div>`;
+}
+
+function step11() {
+  const BONUSES = [
+    { num:'BÔNUS #1', emoji:'📜', title:'O Pergaminho Revelado',                    sub:'Uma mensagem de fé e proteção para trazer clareza, esperança e direção nos momentos em que você mais precisa.',            img:'bonus1.png', value:'R$10' },
+    { num:'BÔNUS #2', emoji:'🔐', title:'O Código de São Miguel',                   sub:'Descubra princípios espirituais inspirados em São Miguel para fortalecer sua fé e enfrentar qualquer batalha com coragem.',  img:'bonus2.png', value:'R$12' },
+    { num:'BÔNUS #3', emoji:'✨', title:'Oração Secreta do Arcanjo Miguel',          sub:'Uma poderosa oração de proteção, força e amparo espiritual para os momentos mais difíceis da sua caminhada.',              img:'bonus3.png', value:'R$12' },
+    { num:'BÔNUS #4', emoji:'🏠', title:'A Bênção do Lar',                          sub:'Um guia especial de oração para colocar sua casa, sua família e seus caminhos sob a proteção divina todos os dias.',        img:'bonus4.png', value:'R$9' },
+    { num:'BÔNUS #5', emoji:'🛡️', title:'As 7 Orações de Proteção de São Miguel',  sub:'Sete orações para diferentes áreas da vida, ajudando você a fortalecer sua fé, encontrar paz e buscar proteção diariamente.', img:'bonus5.png', value:'R$9' },
+    { num:'BÔNUS #6', emoji:'📅', title:'21 Dias de Fortalecimento Espiritual',     sub:'Uma jornada de 21 dias com orações, reflexões e áudios para renovar sua fé, fortalecer seu coração e transformar sua caminhada espiritual.', img:'bonus6.png', value:'R$8' },
+  ];
+  const bonusCards = BONUSES.map(b => `
+    <div class="bonus-card">
+      <div class="bonus-card-img" data-emoji="${b.emoji}"><img src="${b.img}" alt="${b.title}" onerror="bonusImgFallback(this)"></div>
+      <div class="bonus-card-body">
+        <div class="bonus-card-num">${b.num}</div>
+        <div class="bonus-card-title">${b.title}</div>
+        <div class="bonus-card-sub">${b.sub}</div>
+        <div class="bonus-card-price">
+          <span class="bonus-old-price">${b.value}</span>
+          <span class="bonus-free-badge">GRÁTIS</span>
+        </div>
+      </div>
+    </div>`).join('');
+
+  const checkSvgGreen = `<svg fill="none" viewBox="0 0 9 7"><path d="M1 3.5L3 5.5L8 1" stroke="#20B455" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+  const MAIN_BULLETS = [
+    'Manuscrito completo com a oração guiada personalizada para você',
+    'Narração em áudio com seu nome e área de oração',
+    'Palavras de proteção, fé e fortalecimento espiritual',
+    'Acesso imediato — ouça quando e onde quiser',
+  ];
+  const mainBullets = MAIN_BULLETS.map(b => `
+    <div class="product-bullet">
+      <div class="product-bullet-check">${checkSvgGreen}</div>
+      <span>${b}</span>
+    </div>`).join('');
+
+  const personRows = `
+    <div class="offer-person-row"><span class="offer-person-star">✦</span><div class="offer-person-text"><span>Preparado para: </span><strong>${S.nome || 'Você'}</strong></div></div>
+    ${S.areaOracao ? `<div class="offer-person-row"><span class="offer-person-star">✦</span><div class="offer-person-text"><span>Área de oração: </span><strong>${S.areaOracao}</strong></div></div>` : ''}
+    <div class="offer-person-row"><span class="offer-person-star">✦</span><div class="offer-person-text"><span>Foco espiritual: </span><strong>proteção, fé, paz e direção divina</strong></div></div>`;
+
+  return `<div>
+    <div class="step-inner">
+      ${badge('Seleção Exclusiva para Você')}
+
+      <h2 class="headline headline-lg">${S.nome ? S.nome+', este' : 'Este'} acesso foi preparado especialmente para você.</h2>
+
+      <!-- Chosen block -->
+      <div class="chosen-block">
+        <div class="chosen-crown">🛡️</div>
+        <div class="chosen-title">Você não está aqui por coincidência.</div>
+        <p class="chosen-text">Pelas respostas que você deu, identificamos que existe algo muito específico pesando no seu coração. Por isso, desbloqueamos para você — e somente para você neste momento — o acesso completo ao <strong style="color:var(--gold)">Manuscrito de São Miguel</strong> com todos os bônus, sem custo adicional.</p>
+      </div>
+
+      <!-- Personalization -->
+      <div class="offer-person-box">${personRows}</div>
+
+      <!-- Section: O que você está recebendo -->
+      <div class="bonus-section-title">O que você está recebendo agora</div>
+
+      <!-- Main product -->
+      <div class="product-main-card">
+        <div class="product-main-header">
+          <div class="product-main-tag">⭐ Produto Principal</div>
+          <div class="product-main-title">📜 O Manuscrito de São Miguel</div>
+          <div class="product-main-sub">Oração Guiada Personalizada com seu nome e área de oração</div>
+        </div>
+        <div class="product-main-body">${mainBullets}</div>
+        <div class="product-main-footer">
+          <span class="product-value-old">Valor: R$27,00</span>
+          <span class="product-included">✓ Incluído</span>
+        </div>
+      </div>
+
+      <!-- Bonus section header -->
+      <div class="bonus-unlocked-banner">
+        <div class="bonus-unlocked-icon-wrap">🎁</div>
+        <div class="bonus-unlocked-content">
+          <div class="bonus-unlocked-tag">✦ Liberado exclusivamente para você ✦</div>
+          <div class="bonus-unlocked-title"><span>6 Bônus</span> Exclusivos</div>
+          <div class="bonus-unlocked-sub">desbloqueados com base nas suas respostas</div>
+        </div>
+        <div class="bonus-unlocked-count">
+          <div class="bonus-unlocked-count-num">6</div>
+          <div class="bonus-unlocked-count-lbl">bônus</div>
+        </div>
+      </div>
+
+      <!-- Bonus cards -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">${bonusCards}</div>
+
+      <!-- Value stack -->
+      <div class="value-stack">
+        <div class="value-stack-title">Tudo isso valeria</div>
+        <div class="value-stack-rows">
+          <div class="value-row"><span class="value-row-name">📜 O Manuscrito de São Miguel</span><span class="value-row-price">R$27</span></div>
+          <div class="value-row"><span class="value-row-name">📜 O Pergaminho Revelado</span><span class="value-row-price">R$10</span></div>
+          <div class="value-row"><span class="value-row-name">🔐 O Código de São Miguel</span><span class="value-row-price">R$12</span></div>
+          <div class="value-row"><span class="value-row-name">✨ Oração Secreta do Arcanjo</span><span class="value-row-price">R$12</span></div>
+          <div class="value-row"><span class="value-row-name">🏠 A Bênção do Lar</span><span class="value-row-price">R$9</span></div>
+          <div class="value-row"><span class="value-row-name">🛡️ 7 Orações de Proteção</span><span class="value-row-price">R$9</span></div>
+          <div class="value-row"><span class="value-row-name">📅 21 Dias de Fortalecimento</span><span class="value-row-price">R$8</span></div>
+        </div>
+        <div class="value-divider"></div>
+        <div class="value-total-row">
+          <span class="value-total-label">Valor total:</span>
+          <span class="value-total-price">R$87,00</span>
+        </div>
+        <div class="value-you-pay">
+          <div class="value-you-pay-label">Você paga hoje</div>
+          <div class="value-you-pay-price">apenas R$14,97 — produto + 6 bônus</div>
+        </div>
+      </div>
+
+      <!-- Price -->
+      <div class="price-block">
+        <div class="price-label">Contribuição simbólica</div>
+        <div class="price-old-row"><span class="price-old">R$87,00</span><span class="price-badge">83% OFF</span></div>
+        <div class="price-main"><span class="price-rs">R$</span><span class="price-int">14</span><span class="price-dec">,97</span></div>
+        <div class="price-sub">acesso digital imediato — produto + 6 bônus</div>
+      </div>
+
+      <!-- Ethical guarantee -->
+      <div class="info-box info-box-gold">
+        <p style="font-size:13px;color:rgba(8,43,73,.75);text-align:center;line-height:1.7">
+          Você não está comprando uma promessa. Está acessando uma <strong>experiência devocional única</strong> — criada com base exatamente no que você nos revelou — para ajudar você a orar com mais clareza, sentir proteção e fortalecer sua fé.
+        </p>
+      </div>
+
+      <!-- Main CTA -->
+      <a href="https://ggcheckout.app/checkout/v2/CzYzz5izUG3yi6YEd5kK"
+         onclick="checkout(event,this)"
+         class="btn-primary btn-green"
+         style="font-size:14px;padding:18px 20px;display:block;text-align:center;text-decoration:none;border-radius:16px">
+        QUERO MEU ACESSO AGORA — R$14,97 →
+      </a>
+
+      <div class="secure-row"><span>🔒</span><p>Pagamento seguro. Acesso digital imediato.</p></div>
+      <div style="text-align:center"><button class="btn-ghost" onclick="goTo(3)">Quero voltar e revisar minhas respostas</button></div>
+    </div>
+    <div class="disclaimer"><p>Esta experiência tem finalidade espiritual e devocional. Não substitui acompanhamento médico, psicológico, jurídico ou financeiro. Não garantimos resultados materiais, curas ou mudanças específicas.</p></div>
+  </div>`;
+}
+
+/* ════════════════════════════════════════════════
+   MAIN RENDER
+   ════════════════════════════════════════════════ */
+const stepFns = [null,step01,step02,step03,step04,step05,step06,step07,step08,step09,step10,step11];
+
+function render() {
+  renderHeader();
+  const container = document.getElementById('step-container');
+  const html = `<div class="step-content">${stepFns[S.step]()}</div>`;
+  container.innerHTML = html;
+  window.scrollTo({top:0, behavior:'smooth'});
+  if (S.step === 9) startLoading();
+  if (S.step === 10) initYTStep();
+}
+
+/* ════════════════════════════════════════════════
+   STEP ACTIONS
+   ════════════════════════════════════════════════ */
+function confirmNome() {
+  const v = (document.getElementById('nome-input').value || '').trim();
+  if (!v) { document.getElementById('nome-error').textContent = 'Digite seu primeiro nome para continuar.'; return; }
+  S.nome = v;
+  next();
+}
+
+function selectArea(i) {
+  S.areaOracao = AREA_OPTIONS[i].label;
+  S.areaEmoji  = AREA_OPTIONS[i].emoji;
+  const fb = document.getElementById('s3-fb');
+  if (fb) fb.textContent = 'Sua resposta foi registrada.';
+  document.querySelectorAll('.option-btn').forEach((b,j) => b.classList.toggle('selected', j===i));
+  setTimeout(next, 800);
+}
+
+function selectPeso(i) {
+  S.peso = PESO_OPTIONS[i].label;
+  const fb = document.getElementById('s4-fb');
+  if (fb) fb.textContent = 'Entendido. Vamos seguir com cuidado.';
+  document.querySelectorAll('.option-btn').forEach((b,j) => b.classList.toggle('selected', j===i));
+  setTimeout(next, 800);
+}
+
+function selectUrgencia(i) {
+  S.urgencia = URGENCIA_OPTIONS[i].label;
+  const fb = document.getElementById('s5-fb');
+  if (fb) fb.textContent = `Entendido${S.nome ? ', '+S.nome : ''}. Vamos preparar algo com cuidado.`;
+  document.querySelectorAll('.option-btn').forEach((b,j) => b.classList.toggle('selected', j===i));
+  setTimeout(next, 1000);
+}
+
+function selectFe(i) {
+  S.fe = FE_OPTIONS[i].label;
+  document.querySelectorAll('.option-btn').forEach((b,j) => b.classList.toggle('selected', j===i));
+  const msg = document.getElementById('s6-msg');
+  if (msg) {
+    msg.innerHTML = `<div class="info-box" style="animation:fadeInUp .4s ease both">
+      <p style="font-size:13px;color:rgba(8,43,73,.8);text-align:center;line-height:1.65">
+        <span style="color:var(--gold)">✦</span> A fé, mesmo pequena, ainda pode sustentar um coração cansado.
+      </p></div>`;
+  }
+  setTimeout(next, 1600);
+}
+
+/* ════════════════════════════════════════════════
+   LOADING (step 9)
+   ════════════════════════════════════════════════ */
+let loadTimer = null;
+function startLoading() {
+  if (loadTimer) clearInterval(loadTimer);
+  let prog = 0;
+  const DURATION = 5500, TICK = 50;
+  const inc = 100 / (DURATION / TICK);
+  loadTimer = setInterval(() => {
+    prog = Math.min(prog + inc, 100);
+    const pctEl = document.getElementById('load-pct');
+    const fillEl = document.getElementById('load-fill');
+    const phraseEl = document.getElementById('load-phrase');
+    if (!pctEl) { clearInterval(loadTimer); return; }
+    pctEl.textContent = Math.round(prog) + '%';
+    fillEl.style.width = prog + '%';
+    const idx = [...LOADING_PHRASES].reverse().findIndex(p => prog >= p.pct);
+    const phrase = LOADING_PHRASES[LOADING_PHRASES.length - 1 - (idx >= 0 ? idx : LOADING_PHRASES.length-1)];
+    if (phraseEl && phrase) phraseEl.textContent = phrase.text;
+    if (prog >= 100) { clearInterval(loadTimer); setTimeout(next, 900); }
+  }, TICK);
+}
+
+/* ════════════════════════════════════════════════
+   VIDEO (step 10)
+   ════════════════════════════════════════════════ */
+/* ── VSL video ───────────────────────────────────────────────────── */
+let ytCtaTimer = null;
+
+function _showVideoCta() {
+  if (ytCtaTimer) { clearTimeout(ytCtaTimer); ytCtaTimer = null; }
+  const cta = document.getElementById('video-cta');
+  if (cta && cta.style.display === 'none') {
+    cta.style.display = 'block';
+    cta.scrollIntoView({ behavior:'smooth', block:'nearest' });
+  }
+}
+
+function initYTStep() {
+  if (ytCtaTimer) { clearTimeout(ytCtaTimer); ytCtaTimer = null; }
+  // CTA já está visível — nada a fazer aqui
+}
+
+/* ════════════════════════════════════════════════
+   CHECKOUT
+   ════════════════════════════════════════════════ */
+function checkout(e, el) {
+  if (e) e.preventDefault();
+
+  // 1. Dispara InitiateCheckout para o Meta Pixel
+  if (typeof fbq !== 'undefined') fbq('track', 'InitiateCheckout');
+
+  // 2. Constrói URL do checkout preservando TODOS os parâmetros da página atual
+  //    (utm_source, utm_campaign, fbclid, etc.) + dados do quiz por cima
+  var checkoutUrl = new URL(CHECKOUT_URL);
+
+  // Copia parâmetros da URL de entrada (anúncio → LP)
+  new URLSearchParams(window.location.search).forEach(function(value, key) {
+    checkoutUrl.searchParams.set(key, value);
+  });
+
+  // Lê também de cookies e localStorage como fallback
+  var utmKeys = ['utm_source','utm_medium','utm_campaign','utm_term','utm_content','fbclid','sck','xcod'];
+  document.cookie.split(';').forEach(function(c) {
+    var p = c.trim().split('='); var k = p[0]; var v = p.slice(1).join('=');
+    if (utmKeys.indexOf(k) !== -1 && v && !checkoutUrl.searchParams.has(k))
+      checkoutUrl.searchParams.set(k, decodeURIComponent(v));
+  });
+  utmKeys.forEach(function(k) {
+    try {
+      var v = localStorage.getItem(k) || localStorage.getItem('utmify_' + k);
+      if (v && !checkoutUrl.searchParams.has(k)) checkoutUrl.searchParams.set(k, v);
+    } catch(err) {}
+  });
+
+  // Dados do quiz (sobrescrevem se houver conflito)
+  checkoutUrl.searchParams.set('name', S.nome);
+  checkoutUrl.searchParams.set('area', S.areaOracao);
+  checkoutUrl.searchParams.set('peso', S.peso);
+  checkoutUrl.searchParams.set('urgencia', S.urgencia);
+  checkoutUrl.searchParams.set('fe', S.fe);
+  checkoutUrl.searchParams.set('src', 'quiz-oracao');
+
+  var url = checkoutUrl.toString();
+
+  // 3. Atualiza href para UTMify detectar o destino
+  if (el) el.href = url;
+
+  // 4. Aguarda 200ms para pixels dispararem antes do redirect
+  setTimeout(function(){ window.location.href = url; }, 200);
+}
+
+/* ════════════════════════════════════════════════
+   HELPERS
+   ════════════════════════════════════════════════ */
+function bonusImgFallback(img) {
+  const wrap = img.parentNode;
+  const emoji = wrap.getAttribute('data-emoji') || '🙏';
+  wrap.style.background = 'linear-gradient(135deg,#082B49,#0d4c7a)';
+  wrap.style.minHeight = '100px';
+  wrap.innerHTML = '<div style="font-size:2rem;text-align:center;padding:16px">' + emoji + '</div>';
+}
+
+/* ════════════════════════════════════════════════
+   INIT
+   ════════════════════════════════════════════════ */
+load();
+render();
+</script>
+</body>
+</html>
